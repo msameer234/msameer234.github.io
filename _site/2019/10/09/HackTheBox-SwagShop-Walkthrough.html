@@ -8,21 +8,22 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
 	<link href="sticky-footer.css" rel="stylesheet">
-	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
-	<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Hackthebox Swagshop Walkthrough</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="msameer234.github.io" />
+	<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Hackthebox Swagshop Walkthrough | msameer234.github.io</title>
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Hackthebox Swagshop Walkthrough" />
 <meta name="author" content="msameer234" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="+=================================================================+ SCANNING +=================================================================+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http" />
-<meta property="og:description" content="+=================================================================+ SCANNING +=================================================================+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http" />
+<meta name="description" content="+=============+ SCANNING +=============+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http" />
+<meta property="og:description" content="+=============+ SCANNING +=============+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http" />
 <link rel="canonical" href="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html" />
 <meta property="og:url" content="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html" />
+<meta property="og:site_name" content="msameer234.github.io" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-10-09T00:00:00+05:30" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html","headline":"Hackthebox Swagshop Walkthrough","dateModified":"2019-10-09T00:00:00+05:30","datePublished":"2019-10-09T00:00:00+05:30","author":{"@type":"Person","name":"msameer234"},"description":"+=================================================================+ SCANNING +=================================================================+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html"},"url":"http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html","headline":"Hackthebox Swagshop Walkthrough","dateModified":"2019-10-09T00:00:00+05:30","datePublished":"2019-10-09T00:00:00+05:30","author":{"@type":"Person","name":"msameer234"},"description":"+=============+ SCANNING +=============+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -75,17 +76,17 @@
 </p>
 
 <p><br />
-+=================================================================+<br />
-								SCANNING<br />
-+=================================================================+<br />
++=============+<br />
+SCANNING<br />
++=============+<br />
  nmap 10.10.10.140<br />
 	PORT   STATE SERVICE<br />
 	22/tcp open  ssh<br />
 	80/tcp open  http</p>
 
-<p>+=================================================================+<br />
-							  ENUMERATION<br />
-+=================================================================+</p>
+<p>+================+<br />
+ENUMERATION<br />
++================+</p>
 
 <p>Wibsite hosted on port 80/http — SwagShop – Shoping Site<br />
 	Using Magento CMS — found it by wappalyzer.<br />
@@ -117,9 +118,9 @@
 <br />
 	there is user.txt fie which contains user flag: a448877277e82f05e5ddf9f90aefbac8<br />
 <br />
-+=================================================================+<br />
-						   PRIVILEGE-ESCALATION<br />
-+=================================================================+<br />
++=========================+<br />
+PRIVILEGE-ESCALATION<br />
++=========================+<br />
 <br />
 Type Command:<br />
 	sudo -l and hit enter<br />

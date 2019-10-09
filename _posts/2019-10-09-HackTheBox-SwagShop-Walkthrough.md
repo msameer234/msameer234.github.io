@@ -3,17 +3,17 @@ layout: post
 author: msameer234
 ---
 <br />
-+=================================================================+<br />
-								SCANNING<br />
-+=================================================================+<br />
++=============+<br />
+SCANNING<br />
++=============+<br />
  nmap 10.10.10.140<br />
 	PORT   STATE SERVICE<br />
 	22/tcp open  ssh<br />
 	80/tcp open  http
 
-+=================================================================+<br />
-							  ENUMERATION<br />
-+=================================================================+
++================+<br />
+ENUMERATION<br />
++================+
 
  Wibsite hosted on port 80/http --- SwagShop -- Shoping Site<br />
 	Using Magento CMS --- found it by wappalyzer.<br />
@@ -45,9 +45,9 @@ author: msameer234
 <br />
 	there is user.txt fie which contains user flag: a448877277e82f05e5ddf9f90aefbac8<br />
 <br />
-+=================================================================+<br />
-						   PRIVILEGE-ESCALATION<br />
-+=================================================================+<br />
++=========================+<br />
+PRIVILEGE-ESCALATION<br />
++=========================+<br />
 <br />
 Type Command:<br />
 	sudo -l and hit enter<br />

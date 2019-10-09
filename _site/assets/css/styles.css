@@ -1,5 +1,3 @@
 .current { color: green; }
 
-._body { border: solid 1px; border-color: green; padding-right: 5%; padding-top: 3%; padding-left: 5%; color: green; }
-
-/*# sourceMappingURL=styles.css.map */
+._body { border: solid 1px; border-color: green; padding-right: 5%; padding-top: 3%; padding-left: 5%; color: green; width: 98%; word-wrap: break-word; }

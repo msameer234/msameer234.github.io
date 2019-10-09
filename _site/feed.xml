@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-09T07:51:49+05:30</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Hackthebox Swagshop Walkthrough</title><link href="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html" rel="alternate" type="text/html" title="Hackthebox Swagshop Walkthrough" /><published>2019-10-09T00:00:00+05:30</published><updated>2019-10-09T00:00:00+05:30</updated><id>http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough</id><content type="html" xml:base="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html">&lt;p&gt;&lt;br /&gt;
-+=================================================================+&lt;br /&gt;
-								SCANNING&lt;br /&gt;
-+=================================================================+&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-09T09:19:58+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">msameer234.github.io</title><entry><title type="html">Hackthebox Swagshop Walkthrough</title><link href="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html" rel="alternate" type="text/html" title="Hackthebox Swagshop Walkthrough" /><published>2019-10-09T00:00:00+05:30</published><updated>2019-10-09T00:00:00+05:30</updated><id>http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough</id><content type="html" xml:base="http://localhost:4000/2019/10/09/HackTheBox-SwagShop-Walkthrough.html">&lt;p&gt;&lt;br /&gt;
++=============+&lt;br /&gt;
+SCANNING&lt;br /&gt;
++=============+&lt;br /&gt;
  nmap 10.10.10.140&lt;br /&gt;
 	PORT   STATE SERVICE&lt;br /&gt;
 	22/tcp open  ssh&lt;br /&gt;
 	80/tcp open  http&lt;/p&gt;
 
-&lt;p&gt;+=================================================================+&lt;br /&gt;
-							  ENUMERATION&lt;br /&gt;
-+=================================================================+&lt;/p&gt;
+&lt;p&gt;+================+&lt;br /&gt;
+ENUMERATION&lt;br /&gt;
++================+&lt;/p&gt;
 
 &lt;p&gt;Wibsite hosted on port 80/http — SwagShop – Shoping Site&lt;br /&gt;
 	Using Magento CMS — found it by wappalyzer.&lt;br /&gt;
@@ -41,9 +41,9 @@
 &lt;br /&gt;
 	there is user.txt fie which contains user flag: a448877277e82f05e5ddf9f90aefbac8&lt;br /&gt;
 &lt;br /&gt;
-+=================================================================+&lt;br /&gt;
-						   PRIVILEGE-ESCALATION&lt;br /&gt;
-+=================================================================+&lt;br /&gt;
++=========================+&lt;br /&gt;
+PRIVILEGE-ESCALATION&lt;br /&gt;
++=========================+&lt;br /&gt;
 &lt;br /&gt;
 Type Command:&lt;br /&gt;
 	sudo -l and hit enter&lt;br /&gt;
@@ -93,4 +93,4 @@ And we got flag in root.txt file: c2b087d66e14a652a3b86a130ac56721&lt;br /&gt;
 &lt;br /&gt;
 Finish..!!!&lt;br /&gt;
 &lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>msameer234</name></author><summary type="html">+=================================================================+ SCANNING +=================================================================+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http</summary></entry><entry><title type="html">Hacthebox Fs0ciety</title><link href="http://localhost:4000/2018/08/22/HacTheBox-fs0ciety.html" rel="alternate" type="text/html" title="Hacthebox Fs0ciety" /><published>2018-08-22T00:00:00+05:30</published><updated>2018-08-22T00:00:00+05:30</updated><id>http://localhost:4000/2018/08/22/HacTheBox-fs0ciety</id><content type="html" xml:base="http://localhost:4000/2018/08/22/HacTheBox-fs0ciety.html">&lt;p&gt;Comming Soon!!!&lt;/p&gt;</content><author><name>msameer234</name></author><summary type="html">Comming Soon!!!</summary></entry></feed>
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>msameer234</name></author><summary type="html">+=============+ SCANNING +=============+ nmap 10.10.10.140 PORT STATE SERVICE 22/tcp open ssh 80/tcp open http</summary></entry><entry><title type="html">Hacthebox Fs0ciety</title><link href="http://localhost:4000/2018/08/22/HacTheBox-fs0ciety.html" rel="alternate" type="text/html" title="Hacthebox Fs0ciety" /><published>2018-08-22T00:00:00+05:30</published><updated>2018-08-22T00:00:00+05:30</updated><id>http://localhost:4000/2018/08/22/HacTheBox-fs0ciety</id><content type="html" xml:base="http://localhost:4000/2018/08/22/HacTheBox-fs0ciety.html">&lt;p&gt;Comming Soon!!!&lt;/p&gt;</content><author><name>msameer234</name></author><summary type="html">Comming Soon!!!</summary></entry></feed>
