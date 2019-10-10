@@ -1,6 +1,9 @@
+
 collections:
   authors:
     output: true
+
+disqus_domain: msameer234.disqus.com
 
 defaults:
   - scope:
@@ -11,9 +14,9 @@ defaults:
   - scope:
       path: ""
       type: "posts"
-    values:
-      layout: "post"
       comments: true
+    values:
+      layout: "post"      
   - scope:
       path: ""
     values:
