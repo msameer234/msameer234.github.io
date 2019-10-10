@@ -1,9 +1,9 @@
 ---
 layout: default
-comments: true
 ---
-<div>
-<h1>{{ page.title }}</h1>
+<div id="read_post">
+
+<p style="text-align: right;"><a href="/blog.html#LatestPosts"> << </a>Back</p><h1>{{ page.title }}</h1>
 <p style="border-bottom: solid; border-color: green; color: white;">{{ page.date | date_to_string }} - {{ page.author }}
 {% assign author = site.authors | where: 'short_name', page.author | first %}
   {% if author %}
@@ -12,6 +12,6 @@ comments: true
 </p>
 
 {{ content }}
-
+<p style="text-align: right;"><a href="/blog.html#LatestPosts"> << </a>Back</p>
 {% include comments.html %}
 </div>
