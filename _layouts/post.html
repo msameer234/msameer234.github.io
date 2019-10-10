@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 <div>
 <h1>{{ page.title }}</h1>
@@ -8,7 +9,6 @@ layout: default
   {% if author %}
     - <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
-  <a href={{ post.url }}#disqus_thread>Post a comment</a>
 </p>
 
 {{ content }}
