@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/authors/msameer234.html</loc>
-<lastmod>2019-10-11T18:14:38+05:30</lastmod>
+<lastmod>2019-10-11T18:33:04+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/2018/08/22/HacTheBox-fs0ciety.html</loc>
@@ -24,6 +24,10 @@
 <url>
 <loc>http://localhost:4000/Resume.pdf</loc>
 <lastmod>2019-10-07T21:46:22+05:30</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/google30d24d19ed091711.html</loc>
+<lastmod>2019-10-11T18:32:17+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/resume.html</loc>
