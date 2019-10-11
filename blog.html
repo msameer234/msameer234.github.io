@@ -1,17 +1,23 @@
 ---
 layout: default
 title: "&#991;&alpha;&Sigma; | Blog"
+description: "Catch The Flag(CTF) walkthroughs"
 ---
-<div id="LatestPosts">
-<h1>Latest Posts</h1>
+<div id="Posts" style="margin: 5%;">
+<h1 style="color: green;">Posts</h1>
 
-<ul style="list-style-type:none;"	>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}#read_post">{{ post.title }}</a></h2>
-  		<p style="border-bottom: solid; border-color: green; color: white;">{{ post.date | date_to_string }} - <a href={{ post.url }}#disqus_thread>Post a comment</a></p>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+<div class="card text-white text-center" style="background-color: black; border-color: green;">
+  <div class="card-header" style="border-color: green;">
+    {{ post.title }}
+  </div>
+  <div class="card-body" style="border-color: green;">
+    <p class="card-text">{{ post.excerpt }}</p>
+    <a href="{{ post.url }}#read_post" class="btn" style="border-color: green; color: white;">Read</a>
+  </div>
+  <div class="card-footer text-muted">
+    <p>{{ post.date | date_to_string }} - <a href={{ post.url }}#disqus_thread>Post a comment</a></p>
+  </div>
+</div>
+{% endfor %}
 </div>

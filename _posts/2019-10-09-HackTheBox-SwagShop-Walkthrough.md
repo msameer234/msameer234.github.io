@@ -1,6 +1,7 @@
 ---
 layout: post
 author: msameer234
+description: "HackTheBox machine - SwagShop - walkthrough"
 ---
 <br />
 +=============+<br />
@@ -89,11 +90,9 @@ c2b087d66e14a652a3b86a130ac56721<br />
   |___|.__|       https://hackthebox.store/password<br />
 <br />
                    PS: Use root flag as password!<br />
+
 <br />
-<br />
-<br />
-<br />
-And we got flag in root.txt file: c2b087d66e14a652a3b86a130ac56721<br />
+And we got flag in root.txt file: c2b087d66e14a652a3b86a130ac56721
 <br />
 Finish..!!!<br />
 <br />

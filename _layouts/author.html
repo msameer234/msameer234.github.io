@@ -1,17 +1,20 @@
 ---
 layout: default
+description: "Authors"
 ---
-<div style="color: green;">
-<h1>{{ page.name }}</h1>
-<h4 style="color: white;">{{ page.position }}</h4>
+<div class="_body" style="color: green; margin: 5%;">
+<h3>{{ page.name }}</h3>
+<h5 style="color: white;">{{ page.position }}</h5>
+<hr>
 
 {{ content }}
 
-<h2>Posts</h2>
+<h3>Posts</h3>
 <ul>
   {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
   {% for post in filtered_posts %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+</div>
 </div>
