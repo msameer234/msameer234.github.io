@@ -16,7 +16,7 @@ SCANNING<br />
 ENUMERATION<br />
 +================+
 
- Wibsite hosted on port 80/http --- SwagShop -- Shoping Site<br />
+ Website hosted on port 80/http --- SwagShop -- Shoping Site<br />
 	Using Magento CMS --- found it by wappalyzer.<br />
 	<br />
 	Found RCE of Magento: <br />
