@@ -9,7 +9,7 @@
 			
 				{% for item in site.data.navigation %}
 				<li class="nav-item active" >
-				<a class="nav-link" href="{{ item.link }}" {% if page.url == item.link %}style="font-weight: bold; color:white;"{% else %}style="color:green;"{% endif %} >{% if page.url == item.link %}<span class="sr-only">(current)</span>{% endif %}
+				<a class="nav-link" href="{{ item.link }}" {% if page.url == item.link %}style="font-weight: bold; color:white;"{% else %}style="color:green;"{% endif %} {% if item.link == ("/Resume.pdf") %} rel="noopener noreferrer" target="_blank" {% endif %} >{% if page.url == item.link %}<span class="sr-only">(current)</span>{% endif %}
 					{{ item.name }}
 				</a>
 				</li>
