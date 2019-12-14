@@ -3,17 +3,17 @@ layout: default
 title: "&#991;&alpha;&Sigma; | Blog"
 description: "Catch The Flag(CTF) walkthroughs"
 ---
-<div id="Posts" style="margin: 5%;">
-<h1 style="color: green;">Posts</h1>
+<div id="Posts" style="margin: 5%; ">
+<h1>Posts</h1>
 
 {% for post in site.posts %}
-<div class="card text-white text-center" style="background-color: black; border-color: green;">
-  <div class="card-header" style="border-color: green;">
+<div class="card text-center">
+  <div class="card-header">
     {{ post.title }}
   </div>
-  <div class="card-body" style="border-color: green;">
+  <div class="card-body">
     <p class="card-text">{{ post.excerpt }}</p>
-    <a href="{{ post.url }}#read_post" class="btn" style="border-color: green; color: white;">Read</a>
+    <a href="{{ post.url }}#read_post" class="btn btn-info" >Read</a>
   </div>
   <div class="card-footer text-muted">
     <p>{{ post.date | date_to_string }} - <a href={{ post.url }}#disqus_thread>Post a comment</a></p>

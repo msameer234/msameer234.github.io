@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html style="background-color: #e5e5e5;">
 <head>	
 	<link rel="canonical" href="{{ page.url | prepend: site.url }}">
 	<meta charset="utf-8">
@@ -35,13 +35,13 @@
 	{% feed_meta %}
 	{% seo %}
 </head>
-<body style="background-color: black; text-align:center; margin-top: 100px;">
+<body style="background-color: #e5e5e5; text-align:center; margin-top: 100px;">
 	<!-- Main -->
 	{% include navigation.html %}
-	<div class="jumbotron" style="background-color: black;">   
+	<div class="jumbotron">   
 		<h1 class="display-4"><img src="/profile.jpg" class="avatar" style="height: 40%; width: 40%; border-radius: 50%;" alt="Samir Ahmad Malik"></h1>
 	</div>
-	<div class="container">
+	<div class="container" style="background-color: #e5e5e5;">
 		{{ content }}
 	</div>
 	{% include footer.html %}

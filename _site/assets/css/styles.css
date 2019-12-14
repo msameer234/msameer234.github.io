@@ -1,6 +1,6 @@
 .current { color: green; }
 
-._body { border: solid 1px; border-color: green; padding-right: 5%; padding-top: 3%; padding-left: 5%; color: green; word-wrap: break-word; }
+._body { padding-right: 5%; padding-top: 3%; padding-left: 5%; background-color: #e5e5e5; word-wrap: break-word; }
 
 .social { margin: 0; padding: 0; }
 
