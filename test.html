@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+<body id="app">
+<!-- <script>		
+		var i = 0;
+		var txt = ["whoami","professional/experience","qualification","skills","presence/on/web","contact","address"];
+		var speed = 60;
+		var base = 100;
+
+		function typeWriter() {
+				if (i < txt[0].length) {					
+					document.getElementById(base).innerHTML += txt[0].charAt(i);
+					i++;
+					setTimeout(typeWriter, speed);
+				}
+		}
+</script> -->
+
+<script type="text/javascript">
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+    loop: true
+    delay: 2
+});
+
+typewriter.typeString('<p style="text-align:center; color:red;">Tdk ekjksdf jdfkfk dfkd jkhdfsdjflsdfljj jkdhsfidhijldksfdidndfijdsfdkid dhfid..!!!</p>')
+    .pauseFor(2000)
+    .deleteAll()
+    .typeString('Strings can be removed')
+    .pauseFor(2000)
+    .deleteChars(7)
+    .typeString('<strong>altered!</strong>')
+    .pauseFor(2000)
+    .start();
+</script>	
+</body>
+</html>

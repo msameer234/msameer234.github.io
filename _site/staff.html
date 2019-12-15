@@ -29,6 +29,22 @@
 		});
 	</script>
 
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+	<!-- <script>
+		var i = 0;
+		var txt = 'hellooo';
+		var speed = 60;
+
+		function typeWriter() {
+  		if (i < txt.length) {
+    		document.getElementById("100").innerHTML += txt.charAt(i);
+    		i++;
+    		setTimeout(typeWriter, speed);
+  		}
+		}
+	</script> -->
+
 	<!-- SEO -->
 	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="msameer234.github.io" />
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
@@ -44,7 +60,7 @@
 <!-- End Jekyll SEO tag -->
 
 </head>
-<body style="background-color: #e5e5e5; text-align:center; margin-top: 100px;">
+<body style="background-color: #e5e5e5; text-align:center; margin-top: 100px;" onload="typeWriter()">
 	<!-- Main -->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e5e5e5">
 	<div style="font-weight: bold; "><a style="font-size: 30px;" class="navbar-brand" href="/" >&#991;&alpha;&Sigma;</a></div>
@@ -82,6 +98,7 @@
 	<div class="jumbotron">   
 		<h1 class="display-4"><img src="/profile.jpg" class="avatar" style="height: 40%; width: 40%; border-radius: 50%;" alt="Samir Ahmad Malik"></h1>
 	</div>
+
 	<div class="container" style="background-color: #e5e5e5;">
 		<div style="color: green;">
 <h1>Staff</h1>
