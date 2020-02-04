@@ -1,0 +1,29 @@
+
+collections:
+  authors:
+    output: true
+
+disqus_domain: msameer234.disqus.com
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+      comments: true
+    values:
+      layout: "post" 
+      comments: true     
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
