@@ -1,3 +1,20 @@
+title: Your awesome title
+email: your-email@example.com
+baseurl: "/localhost" # the subpath of your site, e.g. /blog
+url: "https://msameer234.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: msameer234
+github_username:  msameer234
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+
 repository: msameer234/msameer234.github.io
 collections:
   authors:
@@ -23,7 +40,3 @@ defaults:
     values:
       layout: "default"
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
