@@ -14,8 +14,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-
-
 repository: msameer234/msameer234.github.io
 collections:
   authors:
