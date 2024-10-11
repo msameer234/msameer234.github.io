@@ -1,6 +1,6 @@
 - name: Home
-  link: index.html
+  link: /
 - name: Blog
-  link: blog.html
+  link: /blog.html
 - name: Resume
-  link: Resume.pdf
+  link: /Resume.pdf
