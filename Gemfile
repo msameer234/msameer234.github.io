@@ -4,7 +4,7 @@ gem "jekyll", "~> 3.9.3"
 
 gem "minima", "~> 2.0"
 
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
@@ -30,6 +30,6 @@ gem "kramdown-parser-gfm"
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-# gem "github-pages", "= 228", :group => :jekyll_plugins
+gem "github-pages", "= 228", :group => :jekyll_plugins
 
 gem "webrick", "~> 1.8"
